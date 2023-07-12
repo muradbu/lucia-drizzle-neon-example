@@ -7,3 +7,13 @@ To make it work with a framework it shouldn't need much additional work, just ad
 This works in both serverless and edge environments, as it makes use of Neon's serverless driver (https://neon.tech/docs/serverless/serverless-driver).
 
 Context: https://discord.com/channels/1004048134218981416/1128374846171140106
+
+## Testing
+
+I've written the following tests:
+
+- `should register a user`
+- `should not login and throw invalid password`
+- `should create session`
+
+Supply your own `.env` file from the example, run `pnpm db:migrate`, apply the migrations and run `pnpm test`.
