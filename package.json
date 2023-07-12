@@ -14,6 +14,11 @@
     "edge",
     "authentication"
   ],
+  "scripts": {
+    "test:unit": "vitest",
+    "db:generate": "drizzle-kit generate:pg --config drizzle.config.ts",
+    "db:drop": "drizzle-kit drop --config drizzle.config.ts"
+  },
   "dependencies": {
     "@lucia-auth/adapter-postgresql": "2.0.0-beta.6",
     "@neondatabase/serverless": "^0.4.26",
@@ -25,6 +30,7 @@
   "devDependencies": {
     "@types/ws": "^8.5.5",
     "dotenv": "^16.3.1",
-    "drizzle-kit": "^0.19.4"
+    "drizzle-kit": "^0.19.4",
+    "vitest": "^0.33.0"
   }
 }
