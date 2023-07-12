@@ -1,14 +1,19 @@
 {
   "name": "lucia-drizzle-neon-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "An example of using Lucia with Drizzle and Neon",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Murad Buyukasik",
+  "license": "MIT",
+  "tags": [
+    "lucia",
+    "drizzle",
+    "neon",
+    "postgresql",
+    "serverless",
+    "edge",
+    "authentication"
+  ],
   "dependencies": {
     "@lucia-auth/adapter-postgresql": "2.0.0-beta.6",
     "@neondatabase/serverless": "^0.4.26",
