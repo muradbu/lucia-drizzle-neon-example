@@ -9,9 +9,13 @@ dotenv.config();
 // See: https://github.com/neondatabase/serverless#example-nodejs-with-poolconnect
 neonConfig.webSocketConstructor = ws;
 
-// Exporting both the Pool and the Neon instance allows us to pick
-// and choose whether we want to use the WebSocket or HTTP connection.
-// This is not necessary per se, but it's a nice feature to have.
+/*
+ * Exporting both the Pool and the Neon instance allows us to pick and choose whether we want to use the WebSocket or HTTP connection.
+ * This is not necessary per se, but it's a nice feature to have.
+ *
+ * Note: this is not related to Lucia, as it uses the WebSocket connection by default.
+ * But in cases where you want to use the HTTP connection throughout your app, you can do so.
+ */
 export const pool = new Pool({ connectionString: process.env.DB_URL });
 export const http = neon(process.env.DB_URL as string);
 
