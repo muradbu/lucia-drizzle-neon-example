@@ -1,0 +1,25 @@
+{
+  "name": "lucia-drizzle-neon-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lucia-auth/adapter-postgresql": "2.0.0-beta.6",
+    "@neondatabase/serverless": "^0.4.26",
+    "drizzle-orm": "^0.27.2",
+    "lucia": "2.0.0-beta.5",
+    "pg": "^8.11.1",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.5",
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.19.4"
+  }
+}
