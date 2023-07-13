@@ -23,6 +23,6 @@ export default async function SignUp(
 
     response.status(200).send({ user, session });
   } catch (error) {
-    response.status(500).send({ error: error.message });
+    response.status(500).send({ error: error });
   }
 }
