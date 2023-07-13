@@ -28,3 +28,9 @@ You can deploy this to Vercel to test it manually yourself.
 
 - `edge` - this is the edge version of the API
 - `serverless` - this is the serverless version of the API
+
+You can use this command to send a request:
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"id":"your-id","password":"your-password"}' https://<your-vercel-url>/api/auth/<edge or serverless>/<endpoint>
+```
