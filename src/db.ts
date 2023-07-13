@@ -2,8 +2,11 @@ import { drizzle as drizzleWs } from "drizzle-orm/neon-serverless";
 import { drizzle as drizzleHttp } from "drizzle-orm/neon-http";
 import { Pool, neon, neonConfig } from "@neondatabase/serverless";
 import ws from "ws";
-import * as dotenv from "dotenv";
-dotenv.config();
+
+if (process.env.NODE_ENV !== "production") {
+  const dotenv = await import("dotenv");
+  dotenv.config();
+}
 
 // This is required for the WebSocket connection to work in Node.js
 // See: https://github.com/neondatabase/serverless#example-nodejs-with-poolconnect
