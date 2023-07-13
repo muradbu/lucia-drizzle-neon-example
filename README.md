@@ -16,4 +16,15 @@ I've written the following tests:
 - `should not login and throw invalid password`
 - `should create session`
 
-Supply your own `.env` file from the example, run `pnpm db:migrate`, apply the migrations and run `pnpm test`.
+Supply your own `.env` file from the example, run `pnpm db:migrate`, apply the migration and run `pnpm test`.
+
+### Testing it live
+
+You can deploy this to Vercel to test it manually yourself.
+
+`api/edge.ts` & `api/serverless.ts` are "alive" checks using Drizzle, to make sure that the database is queryable.
+
+`api/auth/` contains 2 directories:
+
+- `edge` - this is the edge version of the API
+- `serverless` - this is the serverless version of the API
