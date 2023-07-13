@@ -13,7 +13,7 @@ export default async function SignIn(
   const body = await request.json();
 
   if (!body) return new Response("Must have body");
-  if (!body.id || body.password) return new Response("Missing parameters");
+  if (!body.id || !body.password) return new Response("Missing parameters");
 
   try {
     const user = await auth.useKey("test", body.id, body.password);
