@@ -1,5 +1,5 @@
 import { lucia } from "lucia";
-import { pool } from "@/lib/db";
+import { pool } from "./db";
 import { pg } from "@lucia-auth/adapter-postgresql";
 
 export const auth = lucia({
