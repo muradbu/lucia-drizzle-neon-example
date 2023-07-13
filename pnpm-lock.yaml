@@ -33,6 +33,9 @@ devDependencies:
   drizzle-kit:
     specifier: ^0.19.4
     version: 0.19.4
+  typescript:
+    specifier: ^5.1.6
+    version: 5.1.6
   vitest:
     specifier: ^0.33.0
     version: 0.33.0
@@ -1282,6 +1285,12 @@ packages:
 
   /type@2.7.2:
     resolution: {integrity: sha512-dzlvlNlt6AXU7EBSfpAscydQ7gXB+pPGsPnfJnZpiNJBDj7IaJzQlBZYGdEi4R9HmPdBv2XmWJ6YUtoTa7lmCw==}
+    dev: true
+
+  /typescript@5.1.6:
+    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
     dev: true
 
   /ufo@1.1.2:
