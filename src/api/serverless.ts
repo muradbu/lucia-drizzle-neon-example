@@ -1,7 +1,11 @@
 import { dbHttp } from "../db";
 import { sql } from "drizzle-orm";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(request, response) {
+export default async function Serverless(
+  request: VercelRequest,
+  response: VercelResponse
+) {
   const {
     rows: [firstRow],
   } = await dbHttp.execute(sql`SELECT 1`);
