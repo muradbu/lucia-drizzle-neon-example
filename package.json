@@ -1,6 +1,7 @@
 {
   "name": "lucia-drizzle-neon-example",
   "version": "1.0.0",
+  "type": "module",
   "description": "An example of using Lucia with Drizzle and Neon",
   "keywords": [],
   "author": "Murad Buyukasik",
