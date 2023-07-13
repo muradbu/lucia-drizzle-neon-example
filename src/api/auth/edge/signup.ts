@@ -9,19 +9,21 @@ export default async function SignUp(
   request: Request & { body: { id: string; password: string } }
 ) {
   if (request.method !== "POST") return new Response("Must be POST");
-  if (!request.body) return new Response("Must have body");
-  if (!request.body.id || !request.body.password)
-    return new Response("Missing parameters");
+
+  const body = await request.json();
+
+  if (!body) return new Response("Must have body");
+  if (!body.id || !body.password) return new Response("Missing parameters");
 
   try {
     const user = await auth.createUser({
       key: {
         providerId: "test",
-        providerUserId: request.body.id,
-        password: request.body.password,
+        providerUserId: body.id,
+        password: body.password,
       },
       attributes: {},
-      userId: request.body.id,
+      userId: body.id,
     });
 
     return new Response(
@@ -31,6 +33,6 @@ export default async function SignUp(
       })
     );
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }));
+    return new Response(JSON.stringify({ error: error }));
   }
 }
