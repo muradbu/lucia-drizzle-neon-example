@@ -1,4 +1,4 @@
-import { dbHttp } from "../db";
+import { dbHttp } from "@/lib/db";
 import { sql } from "drizzle-orm";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 

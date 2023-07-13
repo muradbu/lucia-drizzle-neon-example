@@ -1,4 +1,4 @@
-import { auth } from "../../../lucia";
+import { auth } from "@/lib/auth";
 
 export const config = {
   runtime: "edge",

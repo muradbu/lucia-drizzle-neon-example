@@ -1,4 +1,4 @@
-import { auth } from "../../../lucia";
+import { auth } from "@/lib/auth";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 export default async function SignUp(
