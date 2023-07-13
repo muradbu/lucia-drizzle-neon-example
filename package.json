@@ -16,6 +16,7 @@
     "authentication"
   ],
   "scripts": {
+    "build": "tsc --outDir dist",
     "test:unit": "vitest",
     "db:generate": "drizzle-kit generate:pg --config drizzle.config.ts",
     "db:drop": "drizzle-kit drop --config drizzle.config.ts"
