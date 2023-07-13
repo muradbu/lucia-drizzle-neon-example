@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { eq } from "drizzle-orm";
-import { auth } from "@/lib/auth";
-import { dbPool } from "@/lib/db";
+import { auth } from "../src/lib/auth";
+import { dbPool } from "../src/lib/db";
 import { user as UserSchema } from "../src/lib/schema";
 
 const TEST_USER = {
